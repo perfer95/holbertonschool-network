@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Active Internet connections (only servers)"
 # Mostrar conexiones TCP y UDP que están en estado LISTEN
