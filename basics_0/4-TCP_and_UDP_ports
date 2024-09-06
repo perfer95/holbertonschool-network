@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+echo "Active Internet connections (only servers)"
 netstat -tulnp | grep 'LISTEN'
+echo "Active UNIX domain sockets (only servers)"
 netstat -lx | grep 'LISTENING'
