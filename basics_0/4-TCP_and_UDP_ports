@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-echo "Active Internet connections (only servers)"
 # Mostrar sockets TCP y UDP en estado LISTEN y el PID/Nombre del programa
 netstat -tulnp | grep 'LISTEN'
 
-echo "Active UNIX domain sockets (only servers)"
 # Mostrar sockets UNIX de dominio local en estado LISTENING
 netstat -lx | grep 'LISTENING'
