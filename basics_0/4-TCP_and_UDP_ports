@@ -1,3 +1,9 @@
-#!/usr/bin/env bash
-# display TCP and UDP
-netstat -lp
+#!/bin/bash
+
+echo "Active Internet connections (only servers)"
+# Mostrar conexiones TCP y UDP que están en estado LISTEN
+ss -tuln -p | grep LISTEN
+
+echo "Active UNIX domain sockets (only servers)"
+# Mostrar sockets de dominio UNIX que están en estado LISTENING
+ss -lx -p | grep LISTEN
