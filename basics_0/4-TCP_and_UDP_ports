@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-# Mostrar sockets TCP y UDP en estado LISTEN y el PID/Nombre del programa
-netstat -tulnp | grep 'LISTEN'
-
-# Mostrar sockets UNIX de dominio local en estado LISTENING
-netstat -lx | grep 'LISTENING'
+#displays listening ports
+netstat -l --program
