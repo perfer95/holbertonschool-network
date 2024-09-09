@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # Show IPv4 actives
-addresses_ipv4=$(ip -4 -o addr show | awk '{print $4}' | cut -d'/' -f1)
-
-echo "$addresses_ipv4"
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
